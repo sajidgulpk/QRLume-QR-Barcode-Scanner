@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — QRLume: QR &amp; Barcode Scanner</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: #0f172a;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 24px 16px;
+    }
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #d5e0ee;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    h1 { color: #0b132b; margin-top: 0; font-size: 1.85rem; }
+    h2 { color: #1e293b; margin-top: 1.75rem; font-size: 1.2rem; }
+    .meta { color: #475569; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .badge {
+      display: inline-block;
+      background: #d1fae5;
+      color: #065f46;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    code {
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">Local-First Utility &bull; On-Device Scanning &bull; AdMob-Supported Production Policy</span>
+    <h1>Privacy Policy for QRLume</h1>
+    <p class="meta">
+      <strong>Application:</strong> QRLume: QR &amp; Barcode Scanner<br />
+      <strong>Package ID:</strong> <code>com.sajidailab.qrlume</code><br />
+      <strong>Effective Date:</strong> November 17, 2026<br />
+      <strong>Developer / Privacy Contact:</strong> <a href="mailto:sajidgulpk2@gmail.com">sajidgulpk2@gmail.com</a>
+    </p>
+
+    <p>
+      This Privacy Policy explains how <strong>QRLume</strong> (developed by Sajid AI Lab) handles device permissions, scanned QR codes and barcodes, locally stored history, user-initiated exports, and third-party advertising via <strong>Google AdMob</strong> in production releases.
+    </p>
+
+    <h2>1. Camera Permission &amp; QR / Barcode Scanning</h2>
+    <p>
+      QRLume requests the Android <code>android.permission.CAMERA</code> permission solely when you use the live QR Code Scanner or Barcode &amp; Batch Scanner. Camera frames are analyzed in memory on your device using Android CameraX and on-device Google ML Kit / ZXing libraries. Camera frames are never recorded as video, saved automatically, or transmitted to our servers or advertisers.
+    </p>
+
+    <h2>2. Gallery Image Selection (Photo Picker)</h2>
+    <p>
+      When you choose to scan a QR code or barcode from an existing image, QRLume uses the standard Android Photo Picker (<code>PickVisualMedia</code>). You explicitly select only the image you want to decode; QRLume does not request broad storage or full photo-library read permissions.
+    </p>
+
+    <h2>3. Vibration Permission</h2>
+    <p>
+      QRLume declares <code>android.permission.VIBRATE</code> strictly to provide optional tactile haptic feedback when a code is detected (configurable in Settings).
+    </p>
+
+    <h2>4. Local Data Storage &amp; Scan History</h2>
+    <p>
+      All scanned codes, generated QR codes, favorites, and app preferences (theme, language, scanner toggles) are stored locally on your device using an on-device SQLite database (Android Room) and Jetpack DataStore. We do not operate a developer backend server or external database, and your scanned QR/barcode content is never uploaded or shared with advertisers.
+    </p>
+
+    <h2>5. Advertising &amp; Google AdMob</h2>
+    <p>
+      In production releases published on Google Play, QRLume may display advertisements provided by <strong>Google AdMob</strong> (Google LLC) to support free access to the app. When Google AdMob is active:
+    </p>
+    <ul>
+      <li><strong>Information Processed by AdMob:</strong> The Google Mobile Ads SDK may automatically collect and process device and interaction signals, including the Google Advertising ID (<code>com.google.android.gms.permission.AD_ID</code>), approximate IP-based location, device type, operating system version, app interactions (ad views and clicks), and crash/diagnostic metrics for ad delivery, frequency capping, attribution, measurement, and fraud prevention.</li>
+      <li><strong>No QR Content Sharing:</strong> Your scanned QR codes, barcodes, Wi-Fi passwords, contacts, and personal history remain strictly local on your device and are never shared with Google AdMob.</li>
+      <li><strong>Consent Management (EEA, UK &amp; Switzerland):</strong> In regions requiring privacy consent (such as the European Economic Area, the UK, and Switzerland), you will be presented with a consent choice (via Google UMP) allowing you to accept personalized ads, choose non-personalized ads, or update/withdraw your preferences later.</li>
+      <li><strong>Your Opt-Out Controls:</strong> You can limit or reset ad personalization at any time in your Android device settings via <em>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</em> (or <em>Opt out of Ads Personalization</em>).</li>
+      <li><strong>Google Privacy Resources:</strong> To learn more about how Google uses data from apps using AdMob, please review <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Technologies</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>6. Network Access &amp; External Actions</h2>
+    <p>
+      QRLume's core scanning, QR code creation, and local history features operate offline without requiring an account. Network connectivity is used only when Google AdMob requests and displays advertisements in ad-enabled production builds, or when you explicitly tap an external action button after scanning a code (such as <em>Open Browser</em>, <em>Send Email</em>, <em>Call Number</em>, <em>Send SMS</em>, or <em>Open Map</em>), which delegates the action to your chosen system application.
+    </p>
+
+    <h2>7. Data Sharing &amp; Exports (PNG, CSV, PDF)</h2>
+    <p>
+      Your scanned and generated records are never shared automatically. Data leaves the app only when you explicitly initiate an export action:
+    </p>
+    <ul>
+      <li><strong>Save PNG:</strong> Writes a rendered QR image to your device's <code>Pictures/QRLume</code> folder.</li>
+      <li><strong>Share QR / CSV / PDF:</strong> Temporarily writes the exported file to the app's private cache directory and hands a scoped URI via Android <code>FileProvider</code> to the target app you select in the Android Share Sheet.</li>
+      <li><strong>Save CSV / PDF via File Picker:</strong> Writes the exported file to the location you choose using Android's Storage Access Framework.</li>
+    </ul>
+
+    <h2>8. Data Deletion &amp; User Control</h2>
+    <p>
+      You remain in complete control of your local data at all times:
+    </p>
+    <ul>
+      <li>Delete individual scan or created records directly in History or the Code Detail sheet.</li>
+      <li>Remove all local records permanently using <em>Clear All History</em> in History or Settings.</li>
+      <li>Uninstalling QRLume deletes the local SQLite database and preferences stored in the app's private sandbox.</li>
+    </ul>
+
+    <h2>9. Children's Privacy</h2>
+    <p>
+      QRLume is a general-audience utility app and is not directed to children under the age of 13 (or the minimum age of digital consent required in your jurisdiction). We do not knowingly collect personal information from children, and ad requests via Google AdMob follow applicable Google Play Families and age-compliance policies.
+    </p>
+
+    <h2>10. Changes &amp; Contact</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect app updates, AdMob SDK disclosures, or legal requirements. The updated version will always be identified by its Effective Date above.
+    </p>
+    <p>
+      If you have any questions, privacy requests, or concerns regarding QRLume or this Privacy Policy, please contact us at:<br />
+      <strong>Email:</strong> <a href="mailto:sajidgulpk2@gmail.com">sajidgulpk2@gmail.com</a>
+    </p>
+  </main>
+</body>
+</html>
